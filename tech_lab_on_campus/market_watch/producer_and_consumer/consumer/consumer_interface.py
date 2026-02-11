@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
+import pika
 class mqConsumerInterface:
     def __init__(
         self, binding_key: str, exchange_name: str, queue_name: str
@@ -42,7 +42,6 @@ class mqConsumerInterface:
         # Acknowledge message
 
         #Print message (The message is contained in the body parameter variable)
-
         pass
 
     def startConsuming(self) -> None:
@@ -53,9 +52,8 @@ class mqConsumerInterface:
     
     def __del__(self) -> None:
         # Print "Closing RMQ connection on destruction"
-        
-        # Close Channel
 
         # Close Connection
-        
+
+        # Close Channel
         pass
